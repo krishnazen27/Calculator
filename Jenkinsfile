@@ -1,8 +1,6 @@
 //Declarative pipeline syntax
 pipeline {
-    agent {
-        any
-    }
+    agent any
     stages{
         stage('checkout branch') {
             steps {
