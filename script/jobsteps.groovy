@@ -6,6 +6,7 @@ pipeline {
             steps {
                 script {
                     sh "ls -la"
+                    println "this is forom my branch Vinay"
                 }
                 println "checkout branch"
             }
