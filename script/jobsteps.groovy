@@ -5,6 +5,7 @@ pipeline {
         stage('checkout branch') {
             steps {
                 script {
+                    sh 'printenv'
                     sh "ls -la"
                     println "this is forom my branch Vinay"
                 }
