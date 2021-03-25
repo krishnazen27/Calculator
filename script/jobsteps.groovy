@@ -14,6 +14,9 @@ pipeline {
         }
         stage('build repo') {
             steps {
+                script {
+                    buildName "#${env.BUILD_NUMBER} : Branch ${env.BRANCH_NAME} => ${DEPLOYMENT_ENV}"
+                }
                 println "build code"
             }
         }
