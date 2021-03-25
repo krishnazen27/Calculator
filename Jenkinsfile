@@ -20,6 +20,9 @@ pipeline {
                 println "build code"
             }
         }
+        stage('trigger adobe job'){
+            build quietPeriod: 1, job: 'Adobe2_Releases', parameters: [string(name: 'BRANCH_NAME', value: 'master'), string(name: 'DEPLOYMENT_ENV', value: 'dev'), booleanParam(name: 'TEST_ONLY_VALIDATION', value: true)]
+        }
         stage('Deploy') {
             steps {
                 println "build code"
