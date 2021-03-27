@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     sh 'printenv'
-                    sh "ls -la"
+                    sh "ls -lahsd"
                     println "this is forom my branch Vinay"
                 }
                 println "checkout branch"
